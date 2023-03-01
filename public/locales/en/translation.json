@@ -29,7 +29,8 @@
 
   "news": {
     "loadMore": "Load more",
-    "delete": "Delete"
+    "delete": "Delete",
+    "confirm": "Are you sure?"
   },
 
   "profile": {

@@ -28,7 +28,8 @@
 
   "news": {
     "loadMore": "Завантажити",
-    "delete": "Видалити"
+    "delete": "Видалити",
+    "confirm": "Ви впевнені?"
   },
 
   "profile": {

@@ -35,6 +35,7 @@ const useStyles = makeStyles(() => ({
   },
   cardGrid: {
     paddingTop: "100px",
+    paddingBottom: "60px",
     textAlign: "center",
   },
   newsCards: {
@@ -50,7 +51,7 @@ const useStyles = makeStyles(() => ({
 
 const News = () => {
   const [news, setNews] = useState<any[]>([]);
-  const [newsLength, setNewsLength] = useState<number>(20);
+  const [newsLength, setNewsLength] = useState<number>(30);
   const classes = useStyles();
   const { t } = useTranslation();
 
@@ -59,7 +60,7 @@ const News = () => {
 
     getMoreNewsApi(newsLength).then((response) => {
       setNews([...news, ...response.data]);
-      setNewsLength(newsLength + 20);
+      setNewsLength(newsLength + 30);
     });
   };
 
@@ -67,7 +68,7 @@ const News = () => {
     e.preventDefault();
 
     const { id } = e.target;
-    const shoudRemove = window.confirm("Ви впевнені?");
+    const shoudRemove = window.confirm(`${t("news.confirm")}`);
 
     if (shoudRemove) {
       // eslint-disable-next-line
