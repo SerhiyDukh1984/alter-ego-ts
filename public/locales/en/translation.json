@@ -1,0 +1,48 @@
+{
+  "registration": {
+    "authorization": "Authorization",
+    "login": "Login:",
+    "password": "Password",
+    "enter": "Ok",
+    "error": "Username or password entered incorrectly."
+  },
+
+  "appbar": {
+    "home": "Home",
+    "news": "News",
+    "profile": "Profile",
+    "logIn": "Log in", 
+    "logOut": "Log out"
+  },
+
+  "home": {
+    "title": "Web Developer Blog",
+    "frontend": "Front-end",
+    "link1": "Let's deal with union types in TypeScript. ",
+    "link2": "Front-end application architecture - myth or reality. ",
+    "link3": "TypeScript is not only about type annotation. Examples from practice. ",
+    "text1": "Sergiy Bilyk, Front-end Developer, explains why it is better to use Union types instead of Enum and how to work with them correctly. Most of the examples he describes are taken from questions on Stack Overflow, so they are likely to be useful in practice.",
+    "text2": "Dmytro Brahynets believes that front-end engineers tend to be more inclined to technological solutions than architectural ones. It's easy to find projects with really cool  local solutions, but it's more difficult to expand or modify them. This article is about architectural approaches on the frontend.",
+    "text3": "It might seem a bit late to talk about TypeScript in 2021, as the technology is already well-known and popular. However, Vitaliy Ruban, TechLead at Itera, brought some interesting and purely practical cases to show that TS can do much more than some people think."
+
+  },
+
+  "news": {
+    "loadMore": "Load more",
+    "delete": "Delete"
+  },
+
+  "profile": {
+    "admin": "Admin",
+    "email": "Email: ",
+    "avatarUrl": "/images/avatar.jpg",
+    "hobby": "Hobby: ",
+    "bestFriends": "Best friends: ",
+    "dream": "Dream: ",
+    "wet": "wet the russian pigs",
+    "weapon": "Leopard and F-16",
+    "burn": "burn moscow"
+  }
+}
+
+  
