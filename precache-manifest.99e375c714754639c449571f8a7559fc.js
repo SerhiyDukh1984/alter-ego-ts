@@ -4,12 +4,12 @@ self.__precacheManifest = [
     "url": "/alter-ego-ts/static/js/0.539e0d37.chunk.js"
   },
   {
-    "revision": "ba66df36707ea010dc76",
+    "revision": "4626b7f50ce605bad611",
     "url": "/alter-ego-ts/static/css/main.fad27356.chunk.css"
   },
   {
-    "revision": "ba66df36707ea010dc76",
-    "url": "/alter-ego-ts/static/js/main.ba66df36.chunk.js"
+    "revision": "4626b7f50ce605bad611",
+    "url": "/alter-ego-ts/static/js/main.4626b7f5.chunk.js"
   },
   {
     "revision": "d8b466d1b3f620b47a7a",
@@ -48,7 +48,7 @@ self.__precacheManifest = [
     "url": "/alter-ego-ts/static/media/UA.58b18d64.png"
   },
   {
-    "revision": "3ba65b3c0522f7becc8e0b7e64c2130c",
+    "revision": "c275125b2d40ed00d7ddb9e67f6468eb",
     "url": "/alter-ego-ts/index.html"
   }
 ];
