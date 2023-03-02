@@ -4,12 +4,12 @@ self.__precacheManifest = [
     "url": "/alter-ego-ts/static/js/0.539e0d37.chunk.js"
   },
   {
-    "revision": "2f37962737d76ea507d3",
+    "revision": "6a7c1fb9c3e60275f022",
     "url": "/alter-ego-ts/static/css/main.fad27356.chunk.css"
   },
   {
-    "revision": "2f37962737d76ea507d3",
-    "url": "/alter-ego-ts/static/js/main.2f379627.chunk.js"
+    "revision": "6a7c1fb9c3e60275f022",
+    "url": "/alter-ego-ts/static/js/main.6a7c1fb9.chunk.js"
   },
   {
     "revision": "17c5bcd18bc229e9c9f4",
@@ -28,8 +28,8 @@ self.__precacheManifest = [
     "url": "/alter-ego-ts/static/js/5.704197c4.chunk.js"
   },
   {
-    "revision": "9808ae7abfb5973a3aa0",
-    "url": "/alter-ego-ts/static/js/6.9808ae7a.chunk.js"
+    "revision": "cc615034d73130fa390c",
+    "url": "/alter-ego-ts/static/js/6.cc615034.chunk.js"
   },
   {
     "revision": "105dee8ac384dc8abec2",
@@ -48,7 +48,7 @@ self.__precacheManifest = [
     "url": "/alter-ego-ts/static/media/UA.58b18d64.png"
   },
   {
-    "revision": "e3c1b0036c9b73a9ab654e4cc29567d8",
+    "revision": "2ad4490eb9bccaffaa834822148a61dd",
     "url": "/alter-ego-ts/index.html"
   }
 ];
