@@ -3,9 +3,23 @@ import { useEffect, useState } from "react";
 import { Route, Navigate, Routes } from "react-router-dom";
 import CssBaseline from "@mui/material/CssBaseline";
 import Navbar from "./components/Navbar";
+import { useSelector } from "react-redux";
 const Home = lazy(() => import("./pages/Home"));
 const News = lazy(() => import("./pages/News"));
 const Profile = lazy(() => import("./pages/Profile"));
+
+//! ----------- брати дані зі Store для Auth--------------
+
+interface IRootState {
+  user: any 
+}
+
+interface User {
+  login: string,
+  password: string
+}
+
+
 
 const App: React.FC = () => {
   const [isAuth, setIsAuth] = useState<boolean>(false);
@@ -14,6 +28,7 @@ const App: React.FC = () => {
 
   const checkAuth = (data: boolean) => {
     setIsAuth(data);
+    setGetIsAuth(data);
   };
 
   const checkLogout = (data: boolean) => {
@@ -21,9 +36,10 @@ const App: React.FC = () => {
   };
 
   useEffect(() => {
-    const user = JSON.parse(localStorage.getItem("user") || "");
+    const storedLogin = localStorage.getItem("login");
+    const storedPassword = localStorage.getItem("password");
 
-    if (user.login === "admin" && user.password === "12345") {
+    if (storedLogin === "admin" && storedPassword === "12345") {
       setGetIsAuth(true);
       setIsAuth(true);
     }
@@ -39,7 +55,7 @@ const App: React.FC = () => {
         {isAuth || (getIsAuth && !logout) ? (
           <Route path="profile" element={<Profile />} />
         ) : (
-          <Route path="/" />
+          <Route path="/" element={<Home />} />
         )}
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>

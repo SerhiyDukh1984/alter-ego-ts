@@ -1,6 +1,6 @@
 import React from "react";
 import { useEffect, useState } from "react";
-import { NavLink, Link, useLocation } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { useDispatch } from "react-redux";
 
@@ -41,20 +41,16 @@ interface NavbarProps {
 const Navbar: React.FC<NavbarProps> = (props) => {
   const dispatch = useDispatch();
   const { t } = useTranslation();
-  const location = useLocation();
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const classes = useStyles();
-
-  if (location.state) {
-    console.log(location.state.pathname);
-  }
 
   const openModal = () => {
     setIsOpen(true);
   };
 
   const closeModal = () => {
-    localStorage.setItem("user", JSON.stringify({ login: "", password: "" }));
+    localStorage.setItem("login", "");
+    localStorage.setItem("password", "");
 
     dispatch(
       logoutUser({
@@ -80,19 +76,19 @@ const Navbar: React.FC<NavbarProps> = (props) => {
         <Container maxWidth="lg">
           <Toolbar>
             <Typography className={classes.title} variant="h6" color="primary">
-              <Link to="/" state={location} className={classes.title}>
+              <Link to="/" className={classes.title}>
                 {t("appbar.home")}
               </Link>
             </Typography>
 
             <Typography className={classes.title} variant="h6" color="primary">
-              <NavLink to="/news" state={location} className={classes.title}>
+              <NavLink to="news" className={classes.title}>
                 {t("appbar.news")}
               </NavLink>
             </Typography>
 
             <Typography className={classes.title} variant="h6" color="primary">
-              <NavLink to="/profile" state={location} className={classes.title}>
+              <NavLink to="profile" className={classes.title}>
                 {t("appbar.profile")}
               </NavLink>
             </Typography>

@@ -48,10 +48,8 @@ const Auth: React.FC<AuthProps> = (props) => {
     e.preventDefault();
 
     if (login === "admin" && password === "12345") {
-      localStorage.setItem(
-        "user",
-        JSON.stringify({ login: login, password: password })
-      );
+      localStorage.setItem("login", login);
+      localStorage.setItem("password", password);
 
       dispatch(
         loginUser({
