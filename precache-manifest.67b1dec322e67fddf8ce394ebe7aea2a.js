@@ -4,12 +4,12 @@ self.__precacheManifest = [
     "url": "/alter-ego-ts/static/js/0.539e0d37.chunk.js"
   },
   {
-    "revision": "a885a826760aed9ff527",
+    "revision": "6ba2e5017d68ae009c60",
     "url": "/alter-ego-ts/static/css/main.fad27356.chunk.css"
   },
   {
-    "revision": "a885a826760aed9ff527",
-    "url": "/alter-ego-ts/static/js/main.a885a826.chunk.js"
+    "revision": "6ba2e5017d68ae009c60",
+    "url": "/alter-ego-ts/static/js/main.6ba2e501.chunk.js"
   },
   {
     "revision": "d8b466d1b3f620b47a7a",
@@ -20,8 +20,8 @@ self.__precacheManifest = [
     "url": "/alter-ego-ts/static/js/3.f0e979b2.chunk.js"
   },
   {
-    "revision": "d6c9fcd162ae9edb2a82",
-    "url": "/alter-ego-ts/static/js/4.d6c9fcd1.chunk.js"
+    "revision": "9f5956c17eecc1446f71",
+    "url": "/alter-ego-ts/static/js/4.9f5956c1.chunk.js"
   },
   {
     "revision": "704197c4de456252f3d3",
@@ -36,8 +36,8 @@ self.__precacheManifest = [
     "url": "/alter-ego-ts/static/js/7.105dee8a.chunk.js"
   },
   {
-    "revision": "c854f34cd02b81333293",
-    "url": "/alter-ego-ts/static/js/runtime~main.c854f34c.js"
+    "revision": "95b09b74575102e9ccfc",
+    "url": "/alter-ego-ts/static/js/runtime~main.95b09b74.js"
   },
   {
     "revision": "2b2b7da40e9fe37746226683d444215a",
@@ -48,7 +48,7 @@ self.__precacheManifest = [
     "url": "/alter-ego-ts/static/media/UA.58b18d64.png"
   },
   {
-    "revision": "f2428a64f672aff4cde2e4461f80cf4f",
+    "revision": "f4909ab7e2dced40d52f78748de408f3",
     "url": "/alter-ego-ts/index.html"
   }
 ];
