@@ -1,6 +1,6 @@
 import React from "react";
 import { useEffect, useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { useDispatch } from "react-redux";
 
@@ -14,7 +14,7 @@ import {
 } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import LoginForm from "./LoginForm";
-import LanguageSwitcher from "./LanguageSwitcher/LanguageSwitcher" 
+import LanguageSwitcher from "./LanguageSwitcher/LanguageSwitcher";
 import { logoutUser } from "../redux/auth/authSlice";
 
 const useStyles = makeStyles(() => ({
@@ -33,26 +33,28 @@ const useStyles = makeStyles(() => ({
 }));
 
 interface NavbarProps {
-  isAuth: boolean
-  checkAuth(data: boolean): void 
-  checkLogout(data: boolean): void
+  isAuth: boolean;
+  checkAuth(data: boolean): void;
+  checkLogout(data: boolean): void;
 }
 
 const Navbar: React.FC<NavbarProps> = (props) => {
   const dispatch = useDispatch();
+  const { t } = useTranslation();
+  const location = useLocation();
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const classes = useStyles();
-  const { t } = useTranslation();
 
-  
+  if (location.state) {
+    console.log(location.state.pathname);
+  }
 
   const openModal = () => {
     setIsOpen(true);
   };
 
   const closeModal = () => {
-    localStorage.setItem("login", "");
-    localStorage.setItem("password", "");
+    localStorage.setItem("user", JSON.stringify({ login: "", password: "" }));
 
     dispatch(
       logoutUser({
@@ -75,23 +77,26 @@ const Navbar: React.FC<NavbarProps> = (props) => {
   return (
     <>
       <AppBar position="fixed">
-        <Container  maxWidth="lg">
+        <Container maxWidth="lg">
           <Toolbar>
             <Typography className={classes.title} variant="h6" color="primary">
-              <NavLink to="/" className={classes.title}>
+              <Link to="/" state={location} className={classes.title}>
                 {t("appbar.home")}
-              </NavLink>
+              </Link>
             </Typography>
+
             <Typography className={classes.title} variant="h6" color="primary">
-              <NavLink to="/news" className={classes.title}>
+              <NavLink to="/news" state={location} className={classes.title}>
                 {t("appbar.news")}
               </NavLink>
             </Typography>
+
             <Typography className={classes.title} variant="h6" color="primary">
-              <NavLink to="/profile"  className={classes.title}>
+              <NavLink to="/profile" state={location} className={classes.title}>
                 {t("appbar.profile")}
               </NavLink>
             </Typography>
+
             <LanguageSwitcher />
 
             {!props.isAuth ? (
@@ -114,9 +119,9 @@ const Navbar: React.FC<NavbarProps> = (props) => {
               </Button>
             )}
             {!props.isAuth ? (
-              <Avatar alt="?" src="/static/images/avatar/1.jpg" />
+              <Avatar alt="?" src="" />
             ) : (
-              <Avatar alt="avatar" src="/images/avatar.jpg" />
+              <Avatar alt="avatar" src="./images/avatar.jpg" />
             )}
           </Toolbar>
         </Container>
@@ -129,6 +134,6 @@ const Navbar: React.FC<NavbarProps> = (props) => {
       />
     </>
   );
-}
+};
 
 export default Navbar;

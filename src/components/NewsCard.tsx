@@ -31,7 +31,7 @@ export const NewsCard: React.FC<NewsCardProps> = (props) => {
       <Card className={classes.card}>
         <CardMedia
           className={classes.media}
-          image="/images/earth-1756274_1280.jpg"
+          image="./images/earth-1756274_1280.jpg"
           title="image title"
         />
 

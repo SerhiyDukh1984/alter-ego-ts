@@ -2,14 +2,10 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import {
   Button,
-  Card,
   CardActions,
-  CardContent,
-  CardMedia,
   CircularProgress,
   Container,
   Grid,
-  Typography,
 } from "@mui/material";
 import { useEffect, useState } from "react";
 import { getMoreNewsApi, getNewsApi } from "../api/api";

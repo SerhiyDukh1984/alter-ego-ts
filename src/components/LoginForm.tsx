@@ -11,7 +11,7 @@ const useStyles = makeStyles(() => ({
     padding: "20px",
     transform: "translate(-50%, -50%)",
     borderRadius: "10px",
-    backgroundImage: "url(../images/water-1330252_640.jpg)",
+    backgroundImage: "url(./images/water-1330252_640.jpg)",
     position: "relative",
     textAlign: "center",
   },

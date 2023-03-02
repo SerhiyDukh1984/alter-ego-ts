@@ -26,7 +26,7 @@ const useStyles = makeStyles(() => ({
     bottom: 0,
     left: 0,
     right: 0,
-    backgroundImage: "url(../images/ufo-1265186.jpg)",
+    backgroundImage: "url(./images/ufo-1265186.jpg)",
   },
 }));
 

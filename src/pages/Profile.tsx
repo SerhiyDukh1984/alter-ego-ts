@@ -49,7 +49,7 @@ const useStyles = makeStyles(() => ({
     bottom: 0,
     left: 0,
     right: 0,
-    backgroundImage: "url(../images/ukraine-7068221_1920.jpg)",
+    backgroundImage: "url(./images/ukraine-7068221_1920.jpg)",
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
     backgroundPosition: "center",
@@ -61,7 +61,7 @@ const Profile = () => {
   const classes = useStyles();
   const user = {
     email: "admin@ukr.net",
-    avatarUrl: "/images/avatar.jpg",
+    avatarUrl: "./images/avatar.jpg",
   };
 
   return (

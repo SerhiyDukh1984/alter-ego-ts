@@ -10,6 +10,7 @@ i18n
   .init({
     debug: false,
     lng: "en",
+    backend: { loadPath: "/alter-ego-ts/locales/{{lng}}/{{ns}}.json" },
     interpolation: {
       escapeValue: false,
     },
