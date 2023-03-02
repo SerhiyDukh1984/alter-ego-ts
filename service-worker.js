@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/alter-ego-ts/precache-manifest.e1aebf9ccfbf5417acbb8de25a227d27.js"
+  "/alter-ego-ts/precache-manifest.55f9f904c463b4c40506ff97a7dd1e6f.js"
 );
 
 workbox.clientsClaim();
