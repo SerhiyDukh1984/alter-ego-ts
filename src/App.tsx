@@ -1,10 +1,9 @@
 import React, {lazy} from "react";
 import { useEffect, useState } from "react";
 import {
-  Routes,
-  BrowserRouter as Router,
   Route,
   Navigate,
+  Routes,
 } from "react-router-dom";
 import CssBaseline from "@mui/material/CssBaseline";
 import Navbar from "./components/Navbar";
@@ -36,7 +35,7 @@ const App: React.FC =() => {
   }, []);
 
   return (
-    <Router>
+    <>
       <CssBaseline />
       <Navbar isAuth={isAuth} checkAuth={checkAuth} checkLogout={checkLogout} />
       <Routes>
@@ -49,7 +48,7 @@ const App: React.FC =() => {
         )}
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
-    </Router>
+    </>
   );
 }
 
