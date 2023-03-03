@@ -1,6 +1,6 @@
-import axios from "axios";
+import axios, { AxiosResponse } from "axios";
 
-export const getNewsApi = async () => {
+export const getNewsApi = async (): Promise<AxiosResponse> => {
   try {
     const response = await axios.get(
       "https://jsonplaceholder.typicode.com/posts?_limit=30"
@@ -14,7 +14,7 @@ export const getNewsApi = async () => {
   }
 };
 
-export const getMoreNewsApi = async (data: number) => {
+export const getMoreNewsApi = async (data: number): Promise<AxiosResponse> => {
   try {
     const response = await axios.get(
       `https://jsonplaceholder.typicode.com/posts?_start=${data}&_limit=30`

@@ -19,8 +19,8 @@ const useStyles = makeStyles(() => ({
 }));
 
 interface NewsCardProps {
-    title: string
-    text: string
+  title: string;
+  text: string;
 }
 
 export const NewsCard: React.FC<NewsCardProps> = (props) => {
@@ -46,6 +46,6 @@ export const NewsCard: React.FC<NewsCardProps> = (props) => {
       </Card>
     </>
   );
-}
+};
 
 export default NewsCard;

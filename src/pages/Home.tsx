@@ -30,7 +30,7 @@ const useStyles = makeStyles(() => ({
   },
 }));
 
-function Home() {
+const Home: React.FC = () => {
   const classes = useStyles();
   const { t } = useTranslation();
 
@@ -58,13 +58,31 @@ function Home() {
                 {t("home.frontend")}
               </Typography>
               <Typography variant="h6" color="white" paragraph>
-                <a className={classes.link} href="https://dou.ua/forums/topic/33048/">{t("home.link1")}</a>{t("home.text1")}
+                <a
+                  className={classes.link}
+                  href="https://dou.ua/forums/topic/33048/"
+                >
+                  {t("home.link1")}
+                </a>
+                {t("home.text1")}
               </Typography>
               <Typography variant="h6" color="white" paragraph>
-                <a className={classes.link} href="https://dou.ua/forums/topic/34081/">{t("home.link2")}</a>{t("home.text2")}
+                <a
+                  className={classes.link}
+                  href="https://dou.ua/forums/topic/34081/"
+                >
+                  {t("home.link2")}
+                </a>
+                {t("home.text2")}
               </Typography>
               <Typography variant="h6" color="white" paragraph>
-                <a className={classes.link} href="https://dou.ua/forums/topic/35796/">{t("home.link3")}</a>{t("home.text3")}.
+                <a
+                  className={classes.link}
+                  href="https://dou.ua/forums/topic/35796/"
+                >
+                  {t("home.link3")}
+                </a>
+                {t("home.text3")}.
               </Typography>
             </div>
           </Grid>
@@ -72,6 +90,6 @@ function Home() {
       </Container>
     </>
   );
-}
+};
 
 export default Home;

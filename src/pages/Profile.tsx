@@ -56,7 +56,7 @@ const useStyles = makeStyles(() => ({
   },
 }));
 
-const Profile = () => {
+const Profile: React.FC = () => {
   const { t } = useTranslation();
   const classes = useStyles();
   const user = {
@@ -76,7 +76,7 @@ const Profile = () => {
                 title="Dream of UKRAINIANS"
               />
 
-              <CardContent  >
+              <CardContent>
                 <Typography
                   component="h1"
                   variant="h5"
@@ -85,7 +85,7 @@ const Profile = () => {
                 >
                   {t("profile.admin")}
                 </Typography>
-                <div >
+                <div>
                   <Typography component="h5" variant="h5" color="primary">
                     {t("profile.email")}
                     <span className={classes.text}>

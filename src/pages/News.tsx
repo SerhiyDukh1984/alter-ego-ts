@@ -45,7 +45,7 @@ const useStyles = makeStyles(() => ({
   },
 }));
 
-const News = () => {
+const News: React.FC = () => {
   const [news, setNews] = useState<any[]>([]);
   const [newsLength, setNewsLength] = useState<number>(30);
   const classes = useStyles();
@@ -99,17 +99,13 @@ const News = () => {
         </Grid>
         {news.length === 0 && <CircularProgress />}
         {newsLength < 100 && news.length !== 0 && (
-          <Button
-            variant="contained"
-            size="small"
-            onClick={handleClick}
-          >
+          <Button variant="contained" size="small" onClick={handleClick}>
             {t("news.loadMore")}
           </Button>
         )}
       </Container>
     </div>
   );
-}
+};
 
 export default News;

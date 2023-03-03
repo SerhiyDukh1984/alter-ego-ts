@@ -35,7 +35,6 @@ const useStyles = makeStyles(() => ({
 interface NavbarProps {
   isAuth: boolean;
   checkAuth(data: boolean): void;
-  checkLogout(data: boolean): void;
 }
 
 const Navbar: React.FC<NavbarProps> = (props) => {
@@ -49,9 +48,6 @@ const Navbar: React.FC<NavbarProps> = (props) => {
   };
 
   const closeModal = () => {
-    localStorage.setItem("login", "");
-    localStorage.setItem("password", "");
-
     dispatch(
       logoutUser({
         login: null,
@@ -61,7 +57,6 @@ const Navbar: React.FC<NavbarProps> = (props) => {
 
     setIsOpen(false);
     props.checkAuth(false);
-    props.checkLogout(true);
   };
 
   useEffect(() => {
